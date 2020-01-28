@@ -4,6 +4,8 @@ import pytest
 import json
 from rule import Rule
 from strategy import *
+from person import Person
+from product import Product
 
 
 def test_rule_constructor():
