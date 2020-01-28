@@ -4,6 +4,7 @@ import pytest
 from product import Product
 
 def test_product():
-    product = Product("7-1 ARM", 5.0)
-    assert product.name == "7-1 ARM"
+    product = Product("Example", 5.0)
+    assert product.name == "Example"
     assert product.interest_rate == 5.0
+    assert product.disqualified == False
