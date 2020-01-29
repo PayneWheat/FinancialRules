@@ -6,7 +6,6 @@ from rule import Rule
 from strategy import *
 from person import Person
 from product import Product
-from exception import *
 
 
 def test_rule_constructor():
