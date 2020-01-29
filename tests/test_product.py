@@ -8,3 +8,4 @@ def test_product():
     assert product.name == "Example"
     assert product.interest_rate == 5.0
     assert product.disqualified == False
+    assert product.rate_changes == "5.0"
