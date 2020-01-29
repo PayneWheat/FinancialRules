@@ -16,5 +16,11 @@
         "parameters": ["product.name", "product.interest_rate"],
         "values": ["7-1 ARM", 0.5],
         "operation": "=="
+    },
+    {
+        "action": "increase_rate",
+        "parameters": ["person.credit_score", "product.interest_rate"],
+        "values": [650, 0.4],
+        "operation": "<="
     }
 ]

@@ -14,3 +14,7 @@ r.runRules(person, product)
 person = Person(700, "Florida")
 product = Product("7-1 ARM", 5.0)
 r.runRules(person, product)
+
+person = Person(650, "California")
+product = Product("Prod2", 5.0)
+r.runRules(person, product)
