@@ -3,18 +3,18 @@
         "action": "disqualify",
         "parameters": ["person.state", "product.disqualified"],
         "values": ["Florida", true],
-        "operations": ["==", "="]
+        "operation": "=="
     },
     {
         "action": "decrease_rate",
         "parameters": ["person.credit_score", "product.interest_rate"],
         "values": [720, 0.3],
-        "operations": [">=", "-="]
+        "operation": ">="
     },
     {
         "action": "increase_rate",
         "parameters": ["product.name", "product.interest_rate"],
         "values": ["7-1 ARM", 0.5],
-        "operations": ["==", "+="]
+        "operation": "=="
     }
 ]

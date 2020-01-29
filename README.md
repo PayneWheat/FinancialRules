@@ -9,5 +9,5 @@ pip install -r requirements.txt
 ## Tests
 From the root directory, run the command
 ```
-pytest --cov=./ tests/
+pytest tests
 ```

@@ -1,4 +1,7 @@
 import operator
+import sys
+sys.tracebacklimit = 0
+
 class Strategy:
     comparison_operators = {"<": operator.lt, "<=": operator.le, "==": operator.eq, "!=": operator.ne, ">=": operator.ge, ">": operator.gt}
     def __init__(self, ruleJson):
@@ -6,7 +9,7 @@ class Strategy:
         comparisonParameters = ruleJson["parameters"][0].split(".")
         self.compObj = comparisonParameters[0]
         self.compOperandL = comparisonParameters[1]
-        self.compOperation = self.comparison_operators[ruleJson["operations"][0]]
+        self.compOperation = self.comparison_operators[ruleJson["operation"]]
         self.compOperandR = ruleJson["values"][0]
         mutationParameters = ruleJson["parameters"][1].split(".")
         self.mutObj = mutationParameters[0]
@@ -17,9 +20,8 @@ class Strategy:
         refObj = locals()[self.compObj]
         if self.compOperation(getattr(refObj, self.compOperandL), self.compOperandR):
             setattr(product, self.mutOperandL, self.resultOperation(getattr(product, self.mutOperandL), self.mutOperandR))
-            #product.rate_changes += self.updateOutput(product) + str(self.mutOperandR)
             self.updateOutput(product)
-            #product.rate_changes += str(self.mutOperandR) + " "
+
     
     def updateOutput(self, product):
         pass

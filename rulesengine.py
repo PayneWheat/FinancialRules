@@ -2,6 +2,8 @@ import json
 from person import Person
 from product import Product
 from rule import Rule
+import sys
+sys.tracebacklimit = 0
 
 class RulesEngine:
     def __init__(self):
